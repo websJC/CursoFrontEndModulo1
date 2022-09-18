@@ -1,0 +1,184 @@
+<!-- @autor Jose Conesa Botia -->
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>FrontEnd Opensource Developer - 1er Modul - Form</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link href="assets/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <main class="wrapper">
+
+
+        <header class="coorp">
+
+            <nav class="navbar navbar-expand-lg">
+
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://websjc.com/wp-content/uploads/2019/05/logonou.png" alt="WebsJC" width="164"
+                            height="100">
+                    </a>
+
+
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Index</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="expositor.html">Exposició</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="form.html">Formulari de consulta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="form2.html">Consultes ràpides</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="container-fluid" role="main">
+            
+
+                <div class="content">
+                    <div class="container-fluid module-grid"  id="top_cont">
+                        <div class="row">
+                            
+                            <div class="col-md-12 col-md-6 bg-light">
+                                <div class="box row">
+                                    <article class="article col-md-12">
+                                        <form action="received.html" method="get">
+                                            <div class="row mx-auto">
+                                                <div class="col form-group">
+                                                    <label for="nombre">Nombre</label>
+                                                    <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre" pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$">
+                                                    <input type="hidden" readonly="" name="oculto" value="111"/>
+                                                </div>
+                                                <div class="col form-group">
+                                                    <label for="apellidos">Apellidos</label>
+                                                  <input id="apellidos" name="apellidos" type="text" class="form-control" placeholder="Apellidos" pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$">
+                                                </div>
+                                            </div>
+                                            <div class="row mx-auto">
+                                                <div class="col form-group">
+                                                    <label for="dniN">Numero DNI</label>
+                                                  <input id="dniN" name="dniN" type="number" class="form-control" placeholder="Numero DNI" size="9" maxlength="8" pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)">
+                                                </div>
+                                                <div class="col form-group">
+                                                    <label for="dniL">Letra DNI</label>
+                                                  <input id="dniL" name="dniL" type="text" class="form-control" placeholder="Letra DNI" size="1" maxlength="1" pattern="([A-Z]{1}))">
+                                                </div>
+                                            </div>
+                                            <div class="row mx-auto">
+                                                <div class="col form-group">
+                                                    <label for="telefono">Telefono</label>
+                                                  <input id="telefono" name="telefono" type="tel" class="form-control" placeholder="Telefono" pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}">
+                                                </div>
+                                                <div class="col form-group">
+                                                    <label for="email">Email</label>
+                                                    <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                                </div>
+                                            </div>
+                                            <div class="row mx-auto">
+                                                <div class="col form-group">
+                                                    <label for="tiempo">Fecha y hora</label>
+                                                    <input type="datetime-local" name="tiempo" class="form-control" id="tiempo" placeholder="Fecha y hora">
+                                                </div>
+                                                <div class="col form-group">
+                                                    <label for="color">Color</label>
+                                                    <input type="color" name="color" class="form-control" id="color" placeholder="color">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="conocimientos">Conocimientos de:</label>
+                                              <select class="form-control" id="conocimientos" name="conocimientos">
+                                                <option disabled> escoger una</option>
+                                                <option value="0">Ninguno</option>
+                                                <option value="1">Principiante</option>
+                                                <option value="2">Medio</option>
+                                                <option value="3">Experto</option>
+                                              </select>
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="motivo">Motivo de la consulta: </label>
+                                              <select multiple class="form-control" id="motivo" name="motivo">
+                                                <option disabled> Permite escoger más de una</option>
+                                                <option>Consulta Formación Frontend</option>
+                                                <option>Consulta Formación Backend</option>
+                                                <option>Consulta Formación Javascript</option>
+                                                <option>Consulta Formación Php</option>
+                                              </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="idiomas">Expositor:</label>
+                                                <select class="form-control" id="idiomas" name="idiomas" autocomplete="on">
+                                                  <option disabled> escoger uno</option>
+                                                  <option value="1">Sección 1</option>
+                                                  <option value="2">Sección 2</option>
+                                                  <option value="3">Sección 3</option>
+                                                  <option value="4">Sección 4</option>
+                                                  <option value="5">Sección 5</option>
+                                                  </select>
+                                              </div>
+                                            <div class="form-group">
+                                              <label for="consulta_text">Escriba su consulta:</label>
+                                              <textarea class="form-control" id="consulta_text" name="consulta_text" rows="3"></textarea>
+                                            </div>
+                                            <div class="row mx-auto">
+                                                <div class="col form-group">
+                                                    <label for="presupuesto" class="form-label">Presupuesto</label>
+                                                    <input type="range" class="form-range" id="presupuesto" name="presupuesto" min="0" max="1000" step="0.5">
+                                                </div>
+                                                <div class="col form-group">
+                                                    <label for="valoracion" class="form-label">Valoración</label>
+                                                    <input type="range" class="form-range" id="valoracion" name="valoracion" min="1" max="5" step="1">
+                                                </div>
+                                            </div>
+                                          
+                                            <input type="reset" class="btn btn-danger">Borrar</input>
+                                            <input type="submit" class="btn btn-primary">Enviar</input>
+                                          </form>
+                                        </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
