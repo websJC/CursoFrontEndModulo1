@@ -1,0 +1,114 @@
+/* @autor Jose Conesa Botia */
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  margin: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+.gris p.lead {
+  background-color: #bfcbc2;
+}
+
+.taronja p.lead {
+  border: 15px solid #f4b027;
+
+}
+
+.verd {
+  background-color: #447c45;
+}
+
+.documentText {
+  position: relative;
+}
+
+.escribe span {
+  position: absolute;
+  right: 0;
+  width: 0;
+  background: #fff;
+  border-left: 1px solid #000;
+  animation-timing-function: steps(80, end);
+  animation-delay: 1s;
+  animation-duration: 9s;
+  animation-name: escribir;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+.escribe_reverso span {
+  position: absolute;
+  right: 0;
+  width: 0;
+  background: #fff;
+  border-left: 1px solid #000;
+  animation-timing-function: steps(80, end);
+  animation-delay: 10s;
+  animation-duration: 9s;
+  animation-name: escribir;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+}
+
+@keyframes escribir {
+  from {
+    width: 100%
+  }
+
+  to {
+    width: 0;
+  }
+}
+
+iframe {
+  border: none;
+  scroll-margin-right: 0;
+  overflow: hidden;
+  height: 900px;
+}
+
+.largo {
+  height: 2100px;
+}
